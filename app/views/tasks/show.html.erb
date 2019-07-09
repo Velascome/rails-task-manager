@@ -1,0 +1,13 @@
+<h1>Tasks Details</h1>
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+
+
+<% if @task.completed == true %>
+  <p> TASK COMPLETED </p>
+<% else %>
+  <p> TO DO </p>
+<% end %>
+
+<button><%= link_to "Edit", edit_path(@task), method: :update %></button>
+<button><%= link_to "go back", tasks_path %></button>
